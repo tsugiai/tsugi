@@ -14,15 +14,15 @@ jobs:
       matrix:
         python-version: ["3.10", "3.11", "3.12"]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: ${{ matrix.python-version }}
 
       - name: Cache pip
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ~/.cache/pip
           key: ${{ runner.os }}-pip-${{ matrix.python-version }}-${{ hashFiles('pyproject.toml') }}
@@ -35,9 +35,20 @@ jobs:
       - name: Lint (ruff)
         run: ruff check src tests
 
+      # Advisory only: the sole mypy findings in the meta-package come from the
+      # sub-SDKs not shipping a py.typed marker, which is outside this repo's
+      # control, so this step must not gate PRs here.
       - name: Type check (mypy)
         run: mypy src
         continue-on-error: true
 
       - name: Run pytest (smoke; torch-free)
         run: pytest -q
+
+      # Advisory only: a newly-published transitive advisory should not block an
+      # unrelated PR. A future task may promote this to a hard, scheduled job.
+      - name: Audit dependencies (pip-audit)
+        run: |
+          python -m pip install pip-audit
+          pip-audit
+        continue-on-error: true
