@@ -21,7 +21,7 @@ classifiers = [
 ]
 
 dependencies = [
-    "tsugi-mend==0.1.0",
+    "tsugi-mend==0.1.2",
     "tsugi-kpool==0.1.0",
 ]
 
