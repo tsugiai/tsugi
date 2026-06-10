@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "tsugi"
-version = "0.1.1"
+version = "0.1.2"
 description = "Unified developer surface for TsugiCinema's open-source distributed-training SDKs. pip install tsugi pulls tsugi-mend (Apache-2.0; patent-independent) and tsugi-kpool (Apache-2.0; patent-aligned) and re-exports both under one namespace."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -21,7 +21,7 @@ classifiers = [
 ]
 
 dependencies = [
-    "tsugi-mend==0.1.3",
+    "tsugi-mend==0.1.4",
     "tsugi-kpool==0.1.2",
 ]
 

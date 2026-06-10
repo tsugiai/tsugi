@@ -17,7 +17,7 @@ wrapper. See LICENSE in each sub-SDK repo for full IP-posture details.
 """
 from tsugi import mend, kpool
 
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 
 
 def about() -> None:
