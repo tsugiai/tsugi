@@ -20,3 +20,6 @@ htmlcov/
 .idea/
 .vscode/
 *.swp
+
+# uv lockfile (not tracked; matches the sub-SDK repo convention)
+uv.lock
