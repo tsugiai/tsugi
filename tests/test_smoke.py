@@ -15,7 +15,7 @@ import tsugi
 
 def test_version_string() -> None:
     assert isinstance(tsugi.__version__, str)
-    assert tsugi.__version__ == "0.1.3"
+    assert tsugi.__version__ == "0.1.4"
 
 
 def test_submodules_present() -> None:

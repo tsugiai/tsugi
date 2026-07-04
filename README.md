@@ -24,7 +24,7 @@ The two sub-SDKs share zero code. This meta-package exposes them under a unified
 
 ## Status
 
-**Pre-Alpha (0.1.3).** APIs are stabilizing. Cross-SDK integration patterns may evolve. The sub-SDK packages (`tsugi-mend` 0.1.5, `tsugi-kpool` 0.1.2) are pinned by exact version in this meta-package's dependencies.
+**Pre-Alpha (0.1.4).** APIs are stabilizing. Cross-SDK integration patterns may evolve. The sub-SDK packages (`tsugi-mend` 0.1.5, `tsugi-kpool` 0.1.3) are pinned by exact version in this meta-package's dependencies.
 
 ## Quickstart
 
@@ -32,9 +32,9 @@ The two sub-SDKs share zero code. This meta-package exposes them under a unified
 import tsugi
 
 tsugi.about()
-# tsugi 0.1.3  unified developer surface
+# tsugi 0.1.4  unified developer surface
 #   tsugi-mend  0.1.5  Apache-2.0  patent-independent (Decoupled DiLoCo + DES-LOC + async-TP + FALCON)
-#   tsugi-kpool 0.1.2  Apache-2.0  patent-aligned (US App. 64/060,315 K-Pool LoRA + US App. 64/055,093 Infinity)
+#   tsugi-kpool 0.1.3  Apache-2.0  patent-aligned (US App. 64/060,315 K-Pool LoRA + US App. 64/055,093 Infinity)
 ```
 
 ### Cross-rack reducer (`tsugi.mend`)
